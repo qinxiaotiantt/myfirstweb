@@ -1,0 +1,98 @@
+【html】
+ <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝布局示例</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 2px solid pink;
+        }
+        .icons, .prices {
+            display: flex;
+            gap: 20px;
+        }
+        .icon, .price, .box {
+            width: 60px;
+            height: 60px;
+            border: 2px solid pink;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .mid-autumn {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 24px;
+            color: purple;
+        }
+        .flash-sale {
+            margin-top: 20px;
+            border-top: 2px solid pink;
+            padding-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .flash-sale-box {
+            width: 100px;
+            height: 100px;
+            border: 2px solid pink;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: purple;
+        }
+        .follow {
+            margin-top: 20px;
+            border: 2px solid pink;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="icons">
+            <div class="icon">淘票票</div>
+            <div class="icon">飞猪旅行</div>
+            <div class="icon">连连消</div>
+            <div class="icon">U先试用</div>
+        </div>
+        <div class="sign-in">签到</div>
+    </div>
+    <div class="prices">
+        <div class="price">消费券 60元 待使用</div>
+        <div class="price">¥60.7</div>
+        <div class="price">¥7.09</div>
+        <div class="price">¥31.1</div>
+        <div class="price">¥1.57</div>
+        <div class="price">¥300.1</div>
+        <div class="price">¥5022</div>
+        <div class="price">¥1.1</div>
+    </div>
+    <div class="mid-autumn">中秋节</div>
+    <div class="flash-sale">
+        <div class="flash-sale-box">国补</div>
+        <div class="flash-sale-box">菜鸟驿站</div>
+        <div class="flash-sale-box">百亿补贴</div>
+        <div class="flash-sale-box">菜鸟收货</div>
+        <div class="flash-sale-box">穿搭 秋季新潮</div>
+    </div>
+    <div class="follow">关注</div>
+</body>
+</html>

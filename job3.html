@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>舞蹈社团招新</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #ff6b6b;
+            color: white;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #ff6b6b;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .back-to-top {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            color: #ff6b6b;
+            text-decoration: none;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>舞蹈社团招新</h1>
+        <!-- 背景音乐控制 -->
+        <audio controls style="display:none;" id="bgMusic">
+            <source src="https://qinxiaotiantt.github.io/myfirstweb/music.mp3" type="audio/mp3">
+            您的浏览器不支持音频元素。
+        </audio>
+        <button onclick="document.getElementById('bgMusic').play()">播放背景音乐</button>
+        <button onclick="document.getElementById('bgMusic').pause()">暂停背景音乐</button>
+    </header>
+
+    <div class="container">
+        <nav>
+            <a href="#intro">社团简介</a>
+            <a href="#schedule">活动安排</a>
+            <a href="#gallery">风采展示</a>
+            <a href="#stories">社员故事</a>
+            <a href="#signup">在线报名</a>
+        </nav>
+
+        <section id="intro">
+            <h2>社团简介</h2>
+            <p>这里是舞蹈社团的简介内容，我们致力于推广舞蹈文化，提供专业的舞蹈训练...</p>
+            <a href="#" class="back-to-top">返回顶部</a>
+        </section>
+
+        <section id="schedule">
+            <h2>活动安排</h2>
+            <table>
+                <tr>
+                    <th colspan="4">舞蹈社 2025 年春季学期活动安排表</th>
+                </tr>
+                <tr>
+                    <td>时间</td>
+                    <td>活动内容</td>
+                    <td>地点</td>
+                    <td>备注</td>
+                </tr>
+                <tr>
+                    <td>2025-03-01</td>
+                    <td>新成员见面会</td>
+                    <td>舞蹈室A</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2025-03-08</td>
+                    <td>舞蹈基础教学公开课</td>
+                    <td>舞蹈室A</td>
+                    <td></td>
+                </tr>
+                <!-- 更多活动安排 -->
+            </table>
+            <a href="#" class="back-to-top">返回顶部</a>
+        </section>
+
+        <section id="gallery">
+            <h2>风采展示</h2>
+            <img src="https://qinxiaotiantt.github.io/myfirstweb/photo.png" alt="舞蹈社团风采" style="width:100%; max-width:600px;">
+            <a href="club_intro.html" target="_blank">点击查看更多活动介绍</a>
+            <a href="#" class="back-to-top">返回顶部</a>
+        </section>
+
+        <section id="stories">
+            <h2>社员故事</h2>
+            <p>这里是社员故事的内容，讲述他们在舞蹈社团的成长和经历...</p>
+            <a href="#" class="back-to-top">返回顶部</a>
+        </section>
+
+        <section id="signup">
+            <h2>在线报名</h2>
+            <form action="/submit_signup" method="post">
+                <table>
+                    <tr>
+                        <td>姓名</td>
+                        <td><input type="text" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td>性别</td>
+                        <td>
+                            <input type="radio" name="gender" value="male"> 男
+                            <input type="radio" name="gender" value="female"> 女
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>出生日期</td>
+                        <td>
+                            <input type="text" name="birth_year" placeholder="年"> -
+                            <input type="text" name="birth_month" placeholder="月"> -
+                            <input type="text" name="birth_day" placeholder="日">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>手机邮箱</td>
+                        <td>
+                            <input type="text" name="phone" placeholder="手机">
+                            <input type="text" name="email" placeholder="邮箱">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>是否有舞蹈基础</td>
+                        <td>
+                            <input type="radio" name="dance_basis" value="yes"> 是
+                            <input type="radio" name="dance_basis" value="no"> 否
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>兴趣方向</td>
+                        <td>
+                            <input type="checkbox" name="interest" value="pop"> 流行舞
+                            <input type="checkbox" name="interest" value="ballet"> 芭蕾舞
+                            <input type="checkbox" name="interest" value="hiphop"> 街舞
+                            <!-- 更多兴趣方向 -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>年级</td>
+                        <td>
+                            <select name="grade">
+                                <option value="freshman">大一</option>
+                                <option value="sophomore">大二</option>
+                                <option value="junior">大三</option>
+                                <option value="senior">大四</option>
+                                <option value="graduate">研究生</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>自我介绍</td>
+                        <td><textarea name="self_introduction" placeholder="请简单介绍自己、以及加入舞蹈社的理由..."></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>是否服从活动安排</td>
+                        <td>
+                            <input type="radio" name="obey_schedule" value="yes"> 是
+                            <input type="radio" name="obey_schedule" value="no"> 否
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align:center;">
+                            <input type="submit" value="提交">
+                            <input type="reset" value="重置">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <a href="#" class="back-to-top">返回顶部</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>版权所有 &copy; 舞蹈社团</p>
+    </footer>
+
+    <!-- 嵌入视频 -->
+    <section style="text-align: center; margin: 20px 0;">
+        <h2>社团视频展示</h2>
+        <embed src="https://qinxiaotiantt.github.io/myfirstweb/sp.mp4" type="video/mp4" style="width:100%; max-width:600px; height:auto;">
+    </section>
+</body>
+</html>
